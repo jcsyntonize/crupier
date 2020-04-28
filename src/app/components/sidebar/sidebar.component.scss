@@ -1,0 +1,17 @@
+@import "src/theme/variables";
+@import "src/theme/functions";
+@import "src/theme/mixins";
+@import "src/theme/text";
+
+:host {
+  @include flex(flex, space-between, center, null, null);
+  padding-right: get-margin(3);
+  padding-left: get-margin(3);
+  width: 100%;
+  height: 9rem;
+  overflow: hidden;
+  background: get-color(light);
+  box-shadow: 0px 0px 20px 6px #a5bdd2;
+}
+
+.c-header {}
