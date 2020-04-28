@@ -1,0 +1,52 @@
+@import "src/theme/variables";
+@import "src/theme/functions";
+@import "src/theme/mixins";
+
+/// Burger ///
+
+  .c-burger {
+    z-index: get-z-index(xl);
+    @include flex(flex, space-between, flex-end, column, nowrap);
+    margin-right: -1rem;
+    padding: 1rem;
+    width: 5.4rem;
+    min-height: 4.4rem;
+    cursor: pointer;
+    
+    &-line {
+      pointer-events: none;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: (get-border(base) * 4);
+      border-radius: get-border-radius(rounded);
+      transform: translateY(0rem);
+    }
+    
+    &--top {
+      @extend .c-burger-line;
+    }
+
+    &--middle {
+      @extend .c-burger-line;
+    }
+
+    &--bottom {
+      @extend .c-burger-line;
+    }
+
+    &:hover {
+      .c-burger--top {
+        transform: translateY(1rem) rotate(45deg); 
+      }
+      .c-burger--middle {
+        opacity: 0;
+      }   
+      .c-burger--bottom {
+        transform: translateY(-1rem) rotate(-45deg);
+      }
+    }
+    
+  }
+  
+/// Burger ///

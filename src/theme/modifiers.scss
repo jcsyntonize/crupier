@@ -1,0 +1,53 @@
+/// Color ///
+
+  /// Text Color 
+    @each $name, $color in $color-map {
+      .ct-#{$name}              { color: $color; }
+      .hover\:ct-#{$name}:hover { color: $color; }
+    }
+  /// Text Color
+  
+  /// Background Color 
+    @each $name, $color in $color-map {
+      .bg-#{$name}              { background-color: $color; }
+      .hover\:bg-#{$name}:hover { background-color: $color; }
+    }
+  /// Background Color
+
+  /// Border color 
+    @each $name, $color in $color-map {
+      .bc-#{$name}              { border-color: $color; }
+      .hover\:bc-#{$name}:hover { border-color: $color; }
+    }
+    
+    @each $breakpoint, $pixels in $breakpoint-map {    
+      @include breakpoint($breakpoint, null) {
+        @each $name, $color in $color-map {
+          .bc-#{$name}\:#{$breakpoint}              { border-color: $color; }
+          .hover\:bc-#{$name}\:#{$breakpoint}:hover { border-color: $color; }
+        }
+      }
+    }
+  /// Border color 
+
+/// Color ///
+
+/// Typography ///
+
+  /// Font Styles 
+    .uppercase { text-transform: uppercase; }
+  /// Font Styles
+    
+  /// Text Align
+    .text-center { text-align: center; }
+    /// Text Align
+
+/// Typography ///
+
+/// Interactivity ///
+
+  /// Transitions 
+    .transition { @include transition; }
+  /// Transitions 
+  
+/// Interactivity ///

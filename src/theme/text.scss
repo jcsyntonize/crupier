@@ -1,0 +1,15 @@
+@import "src/theme/variables";
+@import "src/theme/functions";
+@import "src/theme/mixins";
+
+// Details
+@mixin font-style--logo($family: primary, $weight: semibold, $leading: base, $tracking: md) {
+  font-family: get-font-family($family);
+  font-weight: get-font-weight($weight);
+  font-size: 2.8rem;
+  line-height: get-line-height($leading);
+  letter-spacing: get-letter-spacing($tracking);
+  text-transform: uppercase;
+}
+
+.c-font-style--logo { @include font-style--logo; }

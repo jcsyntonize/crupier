@@ -1,0 +1,74 @@
+@import "src/theme/variables";
+@import "src/theme/functions";
+@import "src/theme/mixins";
+
+html {
+  font-size: 62.5%;
+  font-family: get-font-family(secondary);
+  line-height: get-line-height(lg);
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  vertical-align: baseline;
+  outline: none;
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.4rem;
+  color: get-color(dark);
+  background-color: #dde7ef;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+address, article, aside, button, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+ul, li {
+  margin: 0;
+  list-style: none;
+}
+
+a,
+a > *,
+i,
+button,
+ul li a,
+.w-font-style--link,
+.w-font-style--icon {
+  @include transition;
+}
+
+a:hover,
+a:hover > *,
+i:hover,
+button:hover,
+ul li a:hover,
+.w-font-style--link:hover,
+.w-font-style--icon:hover {
+  color: get-color(accent);
+  cursor: pointer;
+  @include transition;
+}
+
+input, textarea {
+  margin: 0;
+  padding: 0;
+  padding-bottom: get-margin(1);
+  min-height: 3.2rem;
+  border: none;
+  
+  &:focus {
+    outline: 0;
+    border-color: get-color(accent);
+  }
+  
+}
