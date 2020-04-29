@@ -9,7 +9,7 @@
   padding-left: 6rem;
   text-align: center;
   background-color: get-color(ui-700);
-  transform: translateX(-100vw);
+  //transform: translateX(-100vw);
   @include transition;
   
   &.active {

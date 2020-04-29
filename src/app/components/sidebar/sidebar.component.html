@@ -1,12 +1,11 @@
 <ul class="c-sidebar" [class.active]="!toggleSidebar">
-<!-- <ul class="c-sidebar"> -->
-  <li class="c-sidebar--item c-font-style--link">Link 1</li>
-  <li class="c-sidebar--item c-font-style--link">Link 2</li>
-  <li class="c-sidebar--item c-font-style--link">Link 3</li>
-  <li class="c-sidebar--item c-font-style--link">Link 4</li>
-  <li class="c-sidebar--item c-font-style--link">Link 5</li>
-  <li class="c-sidebar--item c-font-style--link">Link 6</li>
-  <li class="c-sidebar--item c-font-style--link">Link 7</li>
-  <li class="c-sidebar--item c-font-style--link">Link 8</li>
-  <li class="c-sidebar--item c-font-style--link">Link 9</li>
+  <li *ngFor="let route of menuRoutes" class="c-sidebar--item c-font-style--link" role="none">
+    <a
+    class="font-primary font-regular text-sm leading-xl color-light"
+    [routerLink]="route.path"
+    [routerLinkActive]="['active']"
+    role="menuitem" tabindex="0">
+      {{ route.name }}
+    </a>
+  </li>
 </ul>

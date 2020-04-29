@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HeaderComponent } from 'src/app/components/header/header.component'
+import { Router, Event, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'cru-sidebar',
@@ -7,10 +7,10 @@ import { HeaderComponent } from 'src/app/components/header/header.component'
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  
   @Input() toggleSidebar: any;
-  
-  constructor() {}
+  @Input() menuRoutes: any;
+
+  constructor(private _router: Router) {}
   
   ngOnInit(): void {
   }
