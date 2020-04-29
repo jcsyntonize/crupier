@@ -12,18 +12,35 @@ $directions: (top, right, bottom, left) !default;
 
   /// UI Colors 
     $white:       #FFFFFF !default;
-    $ui-500:      #738ea7 !default;
+    $ui-100:      red !default;
+    $ui-200:      red !default;
+    $ui-300:      red !default;
+    $ui-400:      #dde7ef !default;
+    $ui-500:      #9abcdc !default; // #a7bfd6
+    $ui-600:      #8fb0ce !default;
+    $ui-700:      #738ea7 !default;
+    $ui-800:      #56718a !default;
+    $ui-900:      red !default;
     $black:       #212121 !default;
-  /// UI Colors
+  /// UI Colors 
    
   /// Maps 
     $color-map: (
-      primary:             $navy,
-      secondary:           $ui-500,
-      accent:              $orange, 
-      none:                transparent,
-      light:               $white,
-      dark:                $black,
+      primary:    $navy,
+      secondary:  $ui-700,        
+      accent:     $orange, 
+      none:       transparent,
+      light:      $white,
+      dark:       $black,
+      ui-100:     $ui-100,
+      ui-200:     $ui-200,
+      ui-300:     $ui-300,
+      ui-400:     $ui-400,
+      ui-500:     $ui-500,
+      ui-600:     $ui-600,
+      ui-700:     $ui-700,
+      ui-800:     $ui-800,
+      ui-900:     $ui-900,
     );
 
     $colors-map: $color-map;
@@ -197,10 +214,15 @@ $directions: (top, right, bottom, left) !default;
   
   /// Tracking
     $letter-spacing-map: (
-      sm: -0.25px,
-      md: -0.5px,
-      lg: -0.75px,
-      xl: -1px
+      -4: -1px,
+      -3: -0.75px,
+      -2: -0.5px,
+      -1: -0.25px,
+       0: 0px,
+       1: 0.25px,
+       2: 0.5px,
+       3: 0.75px,
+       4: 1px
     ) !default;
   /// Tracking
     
@@ -235,7 +257,7 @@ $directions: (top, right, bottom, left) !default;
       lg: 10px,
       xl: 12px,
       circle: 50%,
-      frame: 38px,
+      frame: 34px,
       rounded: 50px,
     ) !default;
 

@@ -19,8 +19,9 @@
       display: inline-block;
       width: 100%;
       height: (get-border(base) * 4);
+      background-color: get-color(ui-600);
       border-radius: get-border-radius(rounded);
-      transform: translateY(0rem);
+      box-shadow: 0px 1px 0px 0px #{get-color(ui-800)};
     }
     
     &--top {
@@ -35,15 +36,17 @@
       @extend .c-burger-line;
     }
 
-    &:hover {
+    &.active {
       .c-burger--top {
-        transform: translateY(1rem) rotate(45deg); 
+        transform: translateY(1rem) rotate(45deg);
+        box-shadow: none;
       }
       .c-burger--middle {
         opacity: 0;
       }   
       .c-burger--bottom {
         transform: translateY(-1rem) rotate(-45deg);
+        box-shadow: none;
       }
     }
     

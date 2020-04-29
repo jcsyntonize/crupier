@@ -30,6 +30,13 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/",
+                "src/theme/",
+                "./node_modules/theme/"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -63,6 +70,7 @@
             }
           }
         },
+
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {

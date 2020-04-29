@@ -23,7 +23,7 @@ html {
 body {
   font-size: 1.4rem;
   color: get-color(dark);
-  background-color: #dde7ef;
+  background-color: get-color(ui-400);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

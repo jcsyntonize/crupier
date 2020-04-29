@@ -1,0 +1,20 @@
+@import "src/theme/variables";
+@import "src/theme/functions";
+@import "src/theme/mixins";
+
+.c-frame {
+  pointer-events: none;
+  
+  &::before {
+    @include pseudo('', fixed, xl, 0, 0, 0, 0, null);
+    border: #{get-border(frame)} solid #{get-color(dark)};
+  }
+    
+  &::after {
+    @include pseudo('', fixed, xl, 0, 0, 0, 0, null);
+    border: #{get-border(frame)} solid #{get-color(dark)};
+    box-shadow: 0 0 0 5rem #{get-color(dark)};
+    border-radius: get-border-radius(frame);
+  }
+  
+}

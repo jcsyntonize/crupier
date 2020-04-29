@@ -1,17 +1,34 @@
 @import "src/theme/variables";
 @import "src/theme/functions";
 @import "src/theme/mixins";
-@import "src/theme/text";
 
-:host {
-  @include flex(flex, space-between, center, null, null);
-  padding-right: get-margin(3);
-  padding-left: get-margin(3);
-  width: 100%;
-  height: 9rem;
-  overflow: hidden;
-  background: get-color(light);
-  box-shadow: 0px 0px 20px 6px #a5bdd2;
+.c-sidebar {
+  @include offset(absolute, 'md', 0, 0, 0, 0, null);
+  @include flex(flex, center, null, column, nowrap);
+  padding-right: 6rem;
+  padding-left: 6rem;
+  text-align: center;
+  background-color: get-color(ui-700);
+  transform: translateX(-100vw);
+  @include transition;
+  
+  &.active {
+    transform: translateX(0);
+  }
+  
+  &--item {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: get-color(light);
+    border-bottom: #{get-border(base)} solid #{get-color(ui-600)};
+    box-shadow: 0px 1px 0px 0px #{get-color(ui-400)};
+
+    
+    &:last-child {
+      border: none;
+      box-shadow: none;
+    }
+    
+  }
+  
 }
-
-.c-header {}

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crupier';
+  sidebarHidden: boolean = true;
+  
+  toggleMenu($event) {
+    this.sidebarHidden = !this.sidebarHidden;
+  }
+
 }

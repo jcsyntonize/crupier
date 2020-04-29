@@ -1,8 +1,7 @@
-<span class="c-header--logo c-font-style--logo ct-primary">Crupiers</span>
+<span class="c-header--logo c-font-style--logo">CrupiBeers</span>
 
-<!-- <a class="c-burger" (click)="toggleMenu($event)"> -->
-<a class="c-burger">
-  <i class="c-burger--top bg-secondary"></i>
-  <i class="c-burger--middle bg-secondary"></i>
-  <i class="c-burger--bottom bg-secondary"></i>
+<a class="c-burger" [class.active]="!toggleSidebar" (click)="toggleMenu()">
+  <i class="c-burger--top"></i>
+  <i class="c-burger--middle"></i>
+  <i class="c-burger--bottom"></i>
 </a>

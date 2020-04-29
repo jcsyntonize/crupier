@@ -1,4 +1,6 @@
-<cru-header></cru-header>
-<!-- <cru-sidebar [toggleSidebar]="sidebarHidden"></cru-sidebar> -->
-<cru-sidebar></cru-sidebar>
+<cru-header [toggleSidebar]="sidebarHidden" (click)="toggleMenu($event)"></cru-header>
+
+<cru-sidebar [toggleSidebar]="sidebarHidden"></cru-sidebar>
+
 <router-outlet></router-outlet>
+<i class="c-frame"></i>
