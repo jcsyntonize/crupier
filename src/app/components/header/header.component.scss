@@ -4,19 +4,23 @@
 @import "src/theme/text";
 
 :host {
-  //@include offset(absolute, 'lg', 0, 0, null, 0, null);
+  @include offset(absolute, 'sm', #{get-border(frame)}, 0, null, 0, null);
   @include flex(flex, space-between, center, null, null);
-  margin-top: 0.9rem;
   padding-right: get-margin(4);
   padding-left: get-margin(4);
   width: 100%;
   height: 9rem;
-  color: get-color(primary);
-  background: get-color(light);
-  border-bottom-width: get-border(base);
-  border-bottom-style: solid;
-  box-shadow: 0px 0px 20px 4px #{get-color(ui-500)};
+  background: get-color(secondary);
+  border-bottom: get-border(base) solid get-color(ui-500);
+  box-shadow: 0px 1px 0px 0px #{get-color(ui-900)};
   overflow: hidden;
+  background: linear-gradient(180deg, $ui-500, $ui-600);
 }
 
-.c-header {}    
+.c-header {
+  
+  &--logo {
+    color: get-color(light);
+  }
+  
+}    

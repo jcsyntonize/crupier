@@ -3,10 +3,10 @@
 @import "src/theme/mixins";
 
 // Details
-@mixin font-style--logo($family: 'primary', $weight: 'bold', $size: lg, $leading: 'base', $tracking: 'md') {
+@mixin font-style--logo($family: 'primary', $weight: 'bold', $size: lg, $leading: 'base', $tracking: -2) {
   font-family: get-font-family($family);
   font-weight: get-font-weight($weight);
-  font-size: (get-font-size($size) + 0.6);
+  font-size: (get-font-size($size) + 1.2rem);
   line-height: get-line-height($leading);
   letter-spacing: get-letter-spacing($tracking);
   text-transform: uppercase;
@@ -15,7 +15,7 @@
 @mixin font-style--link($family: 'secondary', $weight: 'regular', $size: lg, $leading: 'base', $tracking: 4) {
   font-family: get-font-family($family);
   font-weight: get-font-weight($weight);
-  font-size: (get-font-size($size) + 0.4);
+  font-size: (get-font-size($size) + 0.4rem);
   line-height: get-line-height($leading);
   letter-spacing: get-letter-spacing($tracking);
 }

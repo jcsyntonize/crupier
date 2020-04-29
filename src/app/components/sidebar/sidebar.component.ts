@@ -7,7 +7,8 @@ import { Router, Event, NavigationEnd } from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  @Input() toggleSidebar: any;
+  @Input() sidebarHidden: any;
+  @Input() toggleMenu: any;
   @Input() menuRoutes: any;
 
   constructor(private _router: Router) {}

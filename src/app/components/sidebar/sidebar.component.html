@@ -1,11 +1,24 @@
-<ul class="c-sidebar" [class.active]="!toggleSidebar">
-  <li *ngFor="let route of menuRoutes" class="c-sidebar--item c-font-style--link" role="none">
-    <a
-    class="font-primary font-regular text-sm leading-xl color-light"
-    [routerLink]="route.path"
-    [routerLinkActive]="['active']"
-    role="menuitem" tabindex="0">
-      {{ route.name }}
+<ul class="c-sidebar"
+    [class.active]="!sidebarHidden"
+    (click)="toggleMenu">
+    
+  <li *ngFor="let route of menuRoutes"
+       class="c-sidebar--item"
+       role="none">
+    <a class="c-font-style--link"
+       [routerLink]="route?.path"
+       routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+       role="menuitem"
+       tabindex="0"
+       (click)="toggleMenu">
+        {{ route?.name }}
     </a>
   </li>
+  
+  <a class="c-burger is-rotated">
+    <i class="c-burger--top"></i>
+    <i class="c-burger--middle"></i>
+    <i class="c-burger--bottom"></i>
+  </a>
 </ul>
+

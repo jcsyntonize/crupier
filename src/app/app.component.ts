@@ -21,7 +21,7 @@ export class AppComponent {
 
   }
   
-  toggleMenu($event) {
+  toggleMenu() {
     this.sidebarHidden = !this.sidebarHidden;
   }
 

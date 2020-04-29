@@ -5,18 +5,16 @@ import { Component, OnInit, Input, Output } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   host: {
-    class: 'c-header bc-ui-600'
+    class: 'c-header'
   }
 })
 export class HeaderComponent implements OnInit {
-  @Input() toggleSidebar: any;
+  @Input() sidebarHidden: any;
+  @Input() toggleMenu: any;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-  
-  toggleMenu() {
   }
 
 }

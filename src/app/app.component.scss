@@ -7,13 +7,13 @@
   
   &::before {
     @include pseudo('', fixed, xl, 0, 0, 0, 0, null);
-    border: #{get-border(frame)} solid #{get-color(dark)};
+    border: #{get-border(frame)} solid #{get-color(ui-800)};
   }
     
   &::after {
     @include pseudo('', fixed, xl, 0, 0, 0, 0, null);
-    border: #{get-border(frame)} solid #{get-color(dark)};
-    box-shadow: 0 0 0 5rem #{get-color(dark)};
+    border: #{get-border(frame)} solid #{get-color(ui-800)};
+    box-shadow: 0 0 0 5rem #{get-color(ui-800)};
     border-radius: get-border-radius(frame);
   }
   

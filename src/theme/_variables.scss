@@ -1,41 +1,37 @@
-$font-size-base: 10px !default;
-$directions: (top, right, bottom, left) !default;
-
 /// Colors ///
 
-  /// Colors 
-    $navy:     #0d5692 !default;
-    $green:    #28a745 !default;
-    $orange:   #F09819 !default;
-    $red:      #dc3545 !default;
-  /// Colors 
+  /// Brand colors 
+    $brand-1:   #fbba23 !default;
+    $brand-2:   #344f65 !default;
+    $brand-3:   #966900 !default;
+    $brand-4:   #ffda88 !default;
+  /// Brand colors 
 
   /// UI Colors 
     $white:       #FFFFFF !default;
-    $ui-100:      red !default;
-    $ui-200:      red !default;
-    $ui-300:      red !default;
-    $ui-400:      #dde7ef !default;
-    $ui-500:      #9abcdc !default; // #a7bfd6
-    $ui-600:      #8fb0ce !default;
+    $ui-200:      #dde7ef !default;
+    $ui-300:      #9abcdc !default;
+    $ui-500:      #597f9e !default;
+    $ui-600:      #344f65 !default;
     $ui-700:      #738ea7 !default;
-    $ui-800:      #56718a !default;
-    $ui-900:      red !default;
+    $ui-800:      #17222b !default;
+    $ui-900:      #121a21 !default;
     $black:       #212121 !default;
-  /// UI Colors 
+  /// UI Colors
+  
+    $gradient-navy: linear-gradient(0deg, $ui-800, $ui-600) !default;
    
   /// Maps 
     $color-map: (
-      primary:    $navy,
-      secondary:  $ui-700,        
-      accent:     $orange, 
+      primary:    $brand-1,
+      secondary:  $brand-2,
+      tertiary:   $brand-4,        
+      accent:     $brand-3, 
       none:       transparent,
       light:      $white,
       dark:       $black,
-      ui-100:     $ui-100,
       ui-200:     $ui-200,
       ui-300:     $ui-300,
-      ui-400:     $ui-400,
       ui-500:     $ui-500,
       ui-600:     $ui-600,
       ui-700:     $ui-700,
@@ -171,7 +167,8 @@ $directions: (top, right, bottom, left) !default;
 /// Typography ///
 
   /// Font Family 
-    $font-family-primary:      'Patua One', cursive !default;
+    $font-family-primary:      'Titillium Web', cursive !default;
+    //$font-family-primary:      'Patua One', cursive !default;
     $font-family-secondary:    'Ubuntu Mono', monospace !default;
 
     $font-family-map: (
@@ -183,7 +180,7 @@ $directions: (top, right, bottom, left) !default;
   /// Font Weight 
     $font-weight-map: (
       regular:  400,
-      bold:     700,
+      bold:     600,
     ) !default;
   /// Font Weight 
 

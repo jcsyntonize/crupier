@@ -7,7 +7,7 @@ html {
   font-family: get-font-family(secondary);
   line-height: get-line-height(lg);
   box-sizing: border-box;
-  overflow-y: scroll;
+  overfloc-y: scroll;
 }
 
 *, *:before, *:after {
@@ -21,9 +21,10 @@ html {
 }
 
 body {
+  min-height: 100vh;
   font-size: 1.4rem;
   color: get-color(dark);
-  background-color: get-color(ui-400);
+  background: $gradient-navy;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,8 +43,8 @@ a > *,
 i,
 button,
 ul li a,
-.w-font-style--link,
-.w-font-style--icon {
+.c-font-style--link,
+.c-font-style--icon {
   @include transition;
 }
 
@@ -52,8 +53,8 @@ a:hover > *,
 i:hover,
 button:hover,
 ul li a:hover,
-.w-font-style--link:hover,
-.w-font-style--icon:hover {
+.c-font-style--link:hover,
+.c-font-style--icon:hover {
   color: get-color(accent);
   cursor: pointer;
   @include transition;

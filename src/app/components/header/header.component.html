@@ -1,6 +1,8 @@
-<span class="c-header--logo c-font-style--logo">CrupiBeers</span>
+<span class="c-header--logo c-font-style--logo" [routerLink]="['/']">
+  CrupBeer
+</span>
 
-<a class="c-burger" [class.active]="!toggleSidebar" (click)="toggleMenu()">
+<a class="c-burger" (click)="toggleMenu">
   <i class="c-burger--top"></i>
   <i class="c-burger--middle"></i>
   <i class="c-burger--bottom"></i>
