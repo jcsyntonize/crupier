@@ -1,13 +1,30 @@
 <cru-header
-[sidebarHidden]="sidebarHidden"
-[toggleMenu]="toggleMenu()">
+  (toggle)="toggleMenu()">
 </cru-header>
 
 <cru-sidebar
-[sidebarHidden]="sidebarHidden"
-[menuRoutes]="menuRoutes">
-[toggleMenu]="toggleMenu()"
+  [open]="sidebarOpen"
+  [menuRoutes]="menuRoutes"
+  (toggle)="toggleMenu()">
+
+    <li
+      *ngFor="let route of menuRoutes"
+      class="c-sidebar--item"
+      role="none">
+      <a
+        class="c-font-style--link"
+        [routerLink]="route?.path"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        role="menuitem"
+        tabindex="0"
+        (click)="toggleMenu()">
+          {{ route?.name }}
+      </a>
+    </li>
+    
 </cru-sidebar>
 
+<div class="c-frame" role="presentation"></div>
+
 <router-outlet></router-outlet>
-<i class="c-frame"></i>

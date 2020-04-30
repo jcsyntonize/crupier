@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -7,9 +7,9 @@ import { Router, Event, NavigationEnd } from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  @Input() sidebarHidden: any;
-  @Input() toggleMenu: any;
   @Input() menuRoutes: any;
+  @Input() open: boolean;
+  @Output() toggle = new EventEmitter();
 
   constructor(private _router: Router) {}
   

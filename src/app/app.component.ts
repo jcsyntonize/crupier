@@ -7,9 +7,9 @@ import { Router, Event, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public title = 'crupier';
-  public sidebarHidden: boolean = true;
+  public title = 'CrupBeer';
   public menuRoutes: any[];
+  public sidebarOpen: boolean = false;
   
   constructor(private _router: Router) {
     
@@ -22,7 +22,7 @@ export class AppComponent {
   }
   
   toggleMenu() {
-    this.sidebarHidden = !this.sidebarHidden;
+    this.sidebarOpen = !this.sidebarOpen;
   }
 
 }

@@ -1,18 +1,17 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'cru-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  host: {
-    class: 'c-header'
-  }
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Input() sidebarHidden: any;
-  @Input() toggleMenu: any;
+  @HostBinding('class') css: string = 'c-header';
+  @HostBinding('attr.role') att: string = 'banner';
+  
+  @Output() toggle = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
