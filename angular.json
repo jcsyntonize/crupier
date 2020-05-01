@@ -28,13 +28,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+             "src/theme/_main.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/",
-                "src/theme/",
-                "./node_modules/theme/"
+                "src/theme/"
               ]
             },
             "scripts": []

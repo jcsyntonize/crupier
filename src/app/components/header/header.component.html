@@ -1,9 +1,14 @@
-<span class="c-header--logo c-font-style--logo" [routerLink]="['/']">
-  CrupBeer
+<span
+  class="c-header--logo c-font-style--logo"
+  [routerLink]="['home']">
+    CrupBeers
 </span>
 
-<a class="c-burger" (click)="toggle?.emit()">
-  <i class="c-burger--top"></i>
-  <i class="c-burger--middle"></i>
-  <i class="c-burger--bottom"></i>
+<a
+  class="c-burger"
+  (click)="toggle?.emit()"
+  aria-haspopup="true">
+    <i class="c-burger--top"></i>
+    <i class="c-burger--middle"></i>
+    <i class="c-burger--bottom"></i>
 </a>

@@ -1,3 +1,6 @@
+@import "src/theme/functions";
+@import "src/theme/mixins";
+
 /// Colors ///
 
   /// Brand colors 
@@ -167,8 +170,7 @@
 /// Typography ///
 
   /// Font Family 
-    $font-family-primary:      'Titillium Web', cursive !default;
-    //$font-family-primary:      'Patua One', cursive !default;
+    $font-family-primary:      'Titillium Web', sans-serif !default;
     $font-family-secondary:    'Ubuntu Mono', monospace !default;
 
     $font-family-map: (

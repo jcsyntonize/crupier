@@ -4,9 +4,9 @@
 
 <cru-sidebar
   [open]="sidebarOpen"
-  [menuRoutes]="menuRoutes"
+  [routes]="menuRoutes"
   (toggle)="toggleMenu()">
-
+  
     <li
       *ngFor="let route of menuRoutes"
       class="c-sidebar--item"
@@ -22,7 +22,7 @@
           {{ route?.name }}
       </a>
     </li>
-    
+
 </cru-sidebar>
 
 <div class="c-frame" role="presentation"></div>

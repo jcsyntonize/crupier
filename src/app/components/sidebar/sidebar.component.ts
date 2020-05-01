@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, HostBinding, EventEmitter, Input, Output } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -7,8 +7,16 @@ import { Router, Event, NavigationEnd } from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  @Input() menuRoutes: any;
+  @HostBinding('class') css: string = 'c-sidebar';
+  @HostBinding('class.active') get show(): boolean {
+    return this.open;
+  }
+  @HostBinding('attr.aria-controls') attr: string = 'IDREF';
+  // @HostBinding('attr.aria-expanded.true') get show(): boolean {
+  //   return this.open;
+  // }
   @Input() open: boolean;
+  @Input() routes: any;
   @Output() toggle = new EventEmitter();
 
   constructor(private _router: Router) {}
@@ -17,3 +25,6 @@ export class SidebarComponent implements OnInit {
   }
 
 }
+
+
+///
