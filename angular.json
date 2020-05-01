@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-             "src/theme/_main.scss"
+             "src/theme/_index.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [

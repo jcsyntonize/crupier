@@ -7,11 +7,10 @@
   padding-left: get-margin(4);
   width: 100%;
   height: 9rem;
-  background: get-color(secondary);
-  border-bottom: get-border(base) solid get-color(ui-500);
+  background: linear-gradient(180deg, $ui-400, $ui-600);
+  border-bottom: get-border(base) solid get-color(ui-400);
   box-shadow: 0px 1px 0px 0px #{get-color(ui-900)};
   overflow: hidden;
-  background: linear-gradient(180deg, $ui-500, $ui-600);
 }
 
 .c-header {

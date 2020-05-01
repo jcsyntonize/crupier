@@ -4,22 +4,24 @@
 /// Colors ///
 
   /// Brand colors 
-    $brand-1:   #fbba23 !default;
-    $brand-2:   #344f65 !default;
-    $brand-3:   #966900 !default;
-    $brand-4:   #ffdf98 !default;
+    $brand-1: #fbba23 !default;
+    $brand-2: #344f65 !default;
+    $brand-3: #966900 !default;
+    $brand-4: #ffdf98 !default;
   /// Brand colors 
 
   /// UI Colors 
-    $white:       #FFFFFF !default;
-    $ui-200:      #dde7ef !default;
-    $ui-300:      #9abcdc !default;
-    $ui-500:      #597f9e !default;
-    $ui-600:      #344f65 !default;
-    $ui-700:      #738ea7 !default;
-    $ui-800:      #17222b !default;
-    $ui-900:      #121a21 !default;
-    $black:       #212121 !default;
+    $white:  #FFFFFF !default;
+    $ui-100: #a4b9da !default;
+    $ui-200: #90a3c1 !default;
+    $ui-300: #6b7a92 !default;
+    $ui-400: #505c6f !default;
+    $ui-500: #404a5a !default;
+    $ui-600: #303744 !default;
+    $ui-700: #272d38 !default;
+    $ui-800: #171a21 !default;
+    $ui-900: #111319 !default;
+    $black:  #212121 !default;
   /// UI Colors
   
     $gradient-navy: linear-gradient(0deg, $ui-800, $ui-600) !default;
@@ -33,8 +35,10 @@
       none:       transparent,
       light:      $white,
       dark:       $black,
+      ui-100:     $ui-100,
       ui-200:     $ui-200,
       ui-300:     $ui-300,
+      ui-400:     $ui-400,
       ui-500:     $ui-500,
       ui-600:     $ui-600,
       ui-700:     $ui-700,
