@@ -40,14 +40,18 @@
     
   /// Text Align
     .text-center { text-align: center; }
-    /// Text Align
+  /// Text Align
 
 /// Typography ///
 
-/// Interactivity ///
+/// Border ///
+  .border-none { border: none; }
+/// Border ///
 
-  /// Transitions 
-    .transition { @include transition; }
-  /// Transitions 
-  
-/// Interactivity ///
+/// Border ///
+  .box-shadow-none { box-shadow: none; }
+/// Border ///
+
+/// Transitions ///
+  .transition { @include transition; }
+/// Transitions ///

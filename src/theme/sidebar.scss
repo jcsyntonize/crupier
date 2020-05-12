@@ -5,8 +5,6 @@
 .c-sidebar {
   @include offset(absolute, 'md', 0, 0, 0, 0, null);
   @include flex(flex, center, null, column, nowrap);
-  padding-right: 4rem;
-  padding-left: 4rem;
   text-align: center;
   background-color: get-color(primary);
   box-shadow: 5px 0px 10px 0px rgba(get-color(ui-900), .75);
@@ -17,24 +15,31 @@
     transform: translateX(0);
   }
   
+  .c-burger {
+    @include offset(absolute, null, 3.2rem, 4rem, null, null, null);
+  }
+  
   &--item {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    border-bottom: #{get-border(base)} solid rgba(get-color(tertiary), .8);
-    box-shadow: 0px 1px 0px 0px  rgba(get-color(accent), 0.3);
+    border-bottom: #{get-border(base)} solid get-color(tertiary);
+    box-shadow: 0px 1px 0px 0px #e49f00;
 
-    
     &:last-of-type {
       border: none;
       box-shadow: none;
     }
     
+    .c-sidebar--dropdown & {
+      padding-bottom: 0;
+    }
+    
     .c-font-style--link {
       z-index: get-z-index(sm);
       font-weight: get-font-weight('bold');
-      font-size: (get-font-size('lg') + 1rem);
+      font-size: (get-font-size('lg') + 1.4rem);
       color: get-color(light);
-      
+  
       &.active {
         color: get-color(secondary);
       }
@@ -43,8 +48,33 @@
     
   }
   
-  .c-burger {
-    @include offset(absolute, null, 3.2rem, 4rem, null, null, null);
-  }
+  &--dropdown {
+    max-height: 0;
+    // background: #efa703;
+    transform: translateY(3rem);
+    box-shadow: inset 0px 0px 8px 0px rgba(get-color(shadow), 0.5);
+    overflow: hidden;
+    
+    .c-sidebar--item {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      margin-bottom: 1px;
+    }
+    
+    .c-font-style--link {
+      display: inline-block;
+      margin-bottom: 0rem;
+      font-size: get-font-size(lg);
+    }
   
+  }
+
+  &.dropdown-open {
+     
+    .c-sidebar--dropdown {
+      max-height: unset;
+    }
+    
+  }
+    
 }

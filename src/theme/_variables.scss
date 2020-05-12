@@ -7,7 +7,8 @@
     $brand-1: #fbba23 !default;
     $brand-2: #344f65 !default;
     $brand-3: #966900 !default;
-    $brand-4: #ffdf98 !default;
+    $brand-4: #ffd069 !default;
+    $brand-5: #5d4100 !default;
   /// Brand colors 
 
   /// UI Colors 
@@ -35,6 +36,7 @@
       none:       transparent,
       light:      $white,
       dark:       $black,
+      shadow:     $brand-5,
       ui-100:     $ui-100,
       ui-200:     $ui-200,
       ui-300:     $ui-300,

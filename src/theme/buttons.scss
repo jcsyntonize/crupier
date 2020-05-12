@@ -2,59 +2,71 @@
 @import "src/theme/functions";
 @import "src/theme/mixins";
 
-/// Burger ///
-
-  .c-burger {
-    z-index: get-z-index(xl);
-    @include flex(flex, space-between, flex-end, column, nowrap);
-    margin-right: -1rem;
-    padding: 1rem;
-    width: 5.4rem;
-    min-height: 4.4rem;
-    cursor: pointer;
-    
-    &-line {
-      pointer-events: none;
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      height: (get-border(base) * 4);
-      background-color: get-color(ui-400);
-      border-top: get-border(base) solid get-color(ui-200);
-      border-radius: get-border-radius(rounded);
-      box-shadow: 0px 1px 0px 0px #{get-color(ui-900)};
-    }
-    
-    &--top {
-      @extend .c-burger-line;
-    }
-
-    &--middle {
-      @extend .c-burger-line;
-    }
-
-    &--bottom {
-      @extend .c-burger-line;
-    }
-
-    &.is-rotated {
-      .c-burger--top {
-        background-color: get-color(tertiary);
-        transform: translateY(1rem) rotate(45deg);
-        border: none;
-        box-shadow: none;
-      }
-      .c-burger--middle {
-        opacity: 0;
-      }   
-      .c-burger--bottom {
-        background-color: get-color(tertiary);
-        transform: translateY(-1rem) rotate(-45deg);
-        border: none;
-        box-shadow: none;
-      }
-    }
-    
+.c-burger {
+  z-index: get-z-index(xl);
+  @include flex(flex, space-between, flex-end, column, nowrap);
+  margin-right: -1rem;
+  padding: 1rem;
+  width: 5.4rem;
+  min-height: 4.4rem;
+  cursor: pointer;
+  
+  &-line {
+    pointer-events: none;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: (get-border(base) * 4);
+    background-color: get-color(ui-400);
+    border-top: get-border(base) solid get-color(ui-200);
+    border-radius: get-border-radius(rounded);
+    box-shadow: 0px 1px 0px 0px #{get-color(ui-900)};
   }
   
-/// Burger ///
+  &--top {
+    @extend .c-burger-line;
+  }
+
+  &--middle {
+    @extend .c-burger-line;
+  }
+
+  &--bottom {
+    @extend .c-burger-line;
+  }
+
+  &.is-rotated {
+    .c-burger--top {
+      background-color: get-color(light);
+      transform: translateY(1rem) rotate(45deg);
+      border: none;
+      box-shadow: none;
+    }
+    .c-burger--middle {
+      opacity: 0;
+    }   
+    .c-burger--bottom {
+      background-color: get-color(light);
+      transform: translateY(-1rem) rotate(-45deg);
+      border: none;
+      box-shadow: none;
+    }
+  }
+  
+}
+
+.c-dropdown-toggle {
+  width: 3rem;
+  fill: get-color(light);
+  transform: translateY(4px);
+  
+  //.dropdown-open &,
+  &.active {
+    fill: get-color(secondary);
+  }
+  
+  .dropdown-open & {
+    transform: translateY(4px) rotate(180deg);
+  }
+  
+}

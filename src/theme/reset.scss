@@ -21,9 +21,10 @@ html {
 }
 
 body {
+  padding-top: (9rem + get-border(frame));
   min-height: 100vh;
   font-size: 1.4rem;
-  color: get-color(dark);
+  color: get-color(light);
   background: $gradient-navy;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,9 +53,7 @@ a:hover,
 a:hover > *,
 i:hover,
 button:hover,
-ul li a:hover,
-.c-font-style--link:hover,
-.c-font-style--icon:hover {
+ul li a:hover {
   color: get-color(accent);
   cursor: pointer;
   @include transition;

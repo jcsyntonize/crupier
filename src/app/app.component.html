@@ -1,28 +1,57 @@
-<cru-header
-  (toggle)="toggleMenu()">
+<cru-header (toggle)="toggleMenu()">
 </cru-header>
 
 <cru-sidebar
+  [class.dropdown-open]="dropdownOpen"
   [open]="sidebarOpen"
-  [routes]="menuRoutes"
   (toggle)="toggleMenu()">
+  <li
+    *ngFor="let route of menuRoutes"
+    class="c-sidebar--item"
+    [ngClass]="{ 
+      'border-none' : route.children && dropdownOpen,
+      'box-shadow-none' : route.children && dropdownOpen
+    }"
+    role="none"
+    (click)="testToggle(route)">
   
-    <li
-      *ngFor="let route of menuRoutes"
-      class="c-sidebar--item"
-      role="none">
-      <a
-        class="c-font-style--link"
-        [routerLink]="route?.path"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact: true}"
-        role="menuitem"
-        tabindex="0"
-        (click)="toggleMenu()">
-          {{ route?.name }}
-      </a>
-    </li>
+    <a
+      class="c-font-style--link"
+      [routerLink]="route.path"
+      [routerLinkActive]="['active']"
+      role="menuitem" tabindex="0">
+        {{ route?.name }}
+    </a>
+    
+    <svg
+      *ngIf="route.children && route.children.length"
+      class="c-dropdown-toggle"
+      [routerLink]="route.path"
+      [routerLinkActive]="['active']"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 256 256">
+        <g>
+          <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093"/>
+        </g>
+    </svg>
 
+    <ul
+      *ngIf="route.children && route.children.length"
+      class="c-sidebar--dropdown">
+        <li *ngFor="let subroute of route.children"
+        class="c-sidebar--item">
+          <a class="c-font-style--link"
+          [routerLink]="subroute?.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+          role="menuitem" tabindex="0"
+          (click)="toggleMenu()">
+            {{ subroute?.name }}
+          </a>
+        </li>
+    </ul>
+
+  </li>
 </cru-sidebar>
 
 <div class="c-frame" role="presentation"></div>
