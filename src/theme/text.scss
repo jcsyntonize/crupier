@@ -1,6 +1,5 @@
-@import "src/theme/variables";
-@import "src/theme/functions";
-@import "src/theme/mixins";
+@import "variables";
+@import "mixins";
 
 // Details
 @mixin font-style--logo($family: 'primary', $weight: 'bold', $size: lg, $leading: 'base', $tracking: -2) {

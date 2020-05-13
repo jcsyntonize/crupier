@@ -1,7 +1,3 @@
-@import "src/theme/variables";
-@import "src/theme/functions";
-@import "src/theme/mixins";
-
 .c-sidebar {
   @include offset(absolute, 'md', 0, 0, 0, 0, null);
   @include flex(flex, center, null, column, nowrap);

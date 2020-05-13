@@ -1,4 +1,6 @@
-@import "src/theme/text";
+@import "variables";
+@import "functions";
+@import "mixins";
 
 :host {
   @include offset(absolute, 'sm', #{get-border(frame)}, 0, null, 0, null);
